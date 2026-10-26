@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Users from MongoDB
+    link(rel="stylesheet", href="/styles/styles.css")
+  body
+    main.container
+      h1 Users from MongoDB
+      p This list is loaded from MongoDB Atlas.
+
+      if users.length
+        ul
+          each user in users
+            li
+              strong= user.email
+              if user.createdAt
+                p Registered: #{user.createdAt.toLocaleDateString()}
+      else
+        p No users found in the database.
+
+      a(href="/") Back to home

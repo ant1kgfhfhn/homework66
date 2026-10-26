@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Passport Authentication
+    link(rel="stylesheet", href="/styles/styles.css")
+  body
+    main.container
+      h1 Passport Authentication
+      p Express, Passport and MongoDB Atlas.
+
+      if isAuthenticated
+        p You are logged in.
+        a(href="/protected") Open protected page
+        br
+        a(href="/users") View users from MongoDB
+
+        form(action="/logout", method="POST")
+          button(type="submit") Logout
+      else
+        p You are not logged in.
+        a(href="/register") Register
+        br
+        a(href="/login") Login
+        

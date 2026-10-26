@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Login
+    link(rel="stylesheet", href="/styles/styles.css")
+  body
+    main.container
+      h1 Login
+      if registered
+        p.success Registration successful. You can log in now.
+      if loggedOut
+        p.success You have logged out.
+      if error
+        p.error Incorrect email or password.
+      form(action="/login", method="POST")
+        label(for="email") Email
+        input#email(type="email", name="email", required, autocomplete="email")
+        label(for="password") Password
+        input#password(type="password", name="password", required, autocomplete="current-password")
+        button(type="submit") Login
+      p Don't have an account?
+        a(href="/register") Register
+      a(href="/") Back to home

@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Protected Page
+    link(rel="stylesheet", href="/styles/styles.css")
+  body
+    main.container
+      h1 Protected Page
+      p You are successfully authenticated.
+      p Logged in as: #{email}
+      form(action="/logout", method="POST")
+        button(type="submit") Logout
+      a(href="/") Back to home
+      br
+      a(href="/users") View users from MongoDB

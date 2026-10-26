@@ -1,0 +1,20 @@
+{
+  "name": "hw65",
+  "version": "1.0.0",
+  "description": "Express authentication with Passport and MongoDB Atlas",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^16.6.1",
+    "express": "^5.3.0",
+    "express-session": "^1.19.0",
+    "mongoose": "^8.24.7",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "pug": "^3.0.4"
+  }
+}
